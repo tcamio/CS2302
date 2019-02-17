@@ -1,5 +1,5 @@
 '''
-This program write a recursive method to draw given figures in CS2302 Lab1,
+This program writes a recursive method to draw given figures in CS2302 Lab1,
 Question 4.
 '''
 import matplotlib.pyplot as plt
