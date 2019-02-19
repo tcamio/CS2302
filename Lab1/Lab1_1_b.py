@@ -1,9 +1,10 @@
 '''
-This program writes a recursive method to draw given figures in CS2302 Lab1,
+This program write a recursive method to draw given figures in CS2302 Lab1,
 Question 1.
 '''
 
 import matplotlib.pyplot as plt
+import time
 
 # Create a list of x- and y- coordination based on center and side
 def square(center, side):
@@ -35,7 +36,16 @@ side = 800
 weight = 0.5
 numRepeat = 3
 fig, ax = plt.subplots()
+
+# start mesureing time
+start = time.time()
+
 draw_squares(ax, numRepeat, center, side, weight)
+
+# print time elapsed
+elapsed_time = time.time() - start
+print("elapsed_time:{:.6g}".format(elapsed_time) + "[sec]")
+
 ax.set_aspect(1.0)
 ax.axis('off')
 plt.show()

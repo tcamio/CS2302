@@ -1,10 +1,11 @@
 '''
-This program writes a recursive method to draw given figures in CS2302 Lab1,
+This program write a recursive method to draw given figures in CS2302 Lab1,
 Question 4.
 '''
 import matplotlib.pyplot as plt
 import numpy as np
 import math 
+import time
 
 # Create a list of x- and y- coordination based on center and side
 def circle(center,rad):
@@ -38,7 +39,16 @@ fig, ax = plt.subplots()
 numIterate = 3
 center = [0, 0]
 radius = 100
+
+# start mesureing time
+start = time.time()
+
 draw_circles(ax, numIterate, center, radius)
+
+# print time elapsed
+elapsed_time = time.time() - start
+print("elapsed_time:{:.6g}".format(elapsed_time) + "[sec]")
+
 ax.set_aspect(1.0)
 ax.axis('off')
 plt.show()

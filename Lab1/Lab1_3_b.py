@@ -1,8 +1,9 @@
 '''
-This program writes a recursive method to draw given figures in CS2302 Lab1,
+This program write a recursive method to draw given figures in CS2302 Lab1,
 Question 3.
 '''
 import matplotlib.pyplot as plt
+import time
 
 '''
 Create a list of x- and y- coordination based on number of iteration,
@@ -37,7 +38,16 @@ numIterate = remIterate
 parentCoordinate = [0, 0]
 depth = 500
 width = 500
+
+# start mesureing time
+start = time.time()
+
 draw_tree(ax, remIterate, numIterate, parentCoordinate, depth, width)
+
+# print time elapsed
+elapsed_time = time.time() - start
+print("elapsed_time:{:.6g}".format(elapsed_time) + "[sec]")
+
 ax.set_aspect(1.0)
 ax.axis('off')
 plt.show()
